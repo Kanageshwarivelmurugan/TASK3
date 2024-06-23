@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullstack</title>
+</head>
+
+<body>
+    <h1>Jjavascriptcode</h1>
+
+    <script>
+ var flag=new XMLHttpRequest();
+ flag.open("Get","https://restcountries.com/v3.1/all");
+ flag.send();
+ flag.onload=function(){
+    var result=JSON.parse(flag.response);
+    for(var i=0;i<result.length;i++){
+        console.log(result[i].name);
+        console.log(result[i].region);
+        console.log(result[i].subregion);
+        console.log(result[i].population);
+        
+
+    }
+ }       
+
+ 
+        
+         
+
+
+
+    </script>
+</body>
+
+</html>
